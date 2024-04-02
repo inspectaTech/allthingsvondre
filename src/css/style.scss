@@ -1,0 +1,37 @@
+@use "./media";
+$mp: !important;
+
+.section{
+  height: 100vh $mp;
+  // border: 2px solid red;
+}
+
+.root{
+  display: none;
+}
+
+.html_comp{
+  width: 100%;
+}
+
+
+
+// @use "./media";// sample import (top of file?)
+// %skeleton-video-before {
+//   // sample placeholder-selectors
+// }
+
+// @mixin sv-mobile {
+//   // sample mixin
+// }
+
+// .d3-skeleton-video {
+
+//   @include media.mobile {
+//     // min-height: 250px; 
+//     @include sv-mobile; // works
+//     // @extend %sv-mobile;// fails
+//   }
+
+//   @extend %skeleton-video;
+// }

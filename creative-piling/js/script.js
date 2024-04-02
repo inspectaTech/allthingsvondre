@@ -1,7 +1,7 @@
 $(window).on("load", function () {
 
     "use strict";
-
+    
     //Clear URL On Page Refresh
     var loc = window.location.href,
         index = loc.indexOf('#');
@@ -57,11 +57,10 @@ $(window).on("load", function () {
 ====================================== */
 
     $('.side-menu').removeClass('hidden');
-
+    
     setTimeout(function(){
-        $("#loader-fade").fadeOut("slow");
-        $('.side-menu').removeClass('dnone');
-
+      $("#loader-fade").fadeOut("slow");
+      $('.side-menu').removeClass('dnone');
     }, 1000);
 
     // $('.navbar-collapse .navbar-nav .nav-link:nth-child(1)').addClass('active');
@@ -683,7 +682,7 @@ function Showcase() {
             var words = $(this).text().slice(" ");
             var total = words.length;
             $(this).empty();
-            for (index = 0; index < total; index ++){
+            for (let index = 0; index < total; index ++){
                 $(this).append($("<span /> ").text(words[index]));
             }
         });

@@ -1,0 +1,132 @@
+// effect everything smaller than
+$mobile: 480px;
+$tiny: 330px;
+/*
+// IMPORTANT: the cascade for tiny and mobile work in the opposite the smaller must be last
+// to override the larger
+
+  @include mobile{ gap: 6%; }
+  @include tiny{ gap: 4%;}
+*/
+
+
+// effect everthing greater than
+$wearable: 300px;
+$micro: 320px;
+$mini: 481px;
+$tablet: 600px;
+$laptop: 768px;
+$desktop: 992px;
+$xxl: 1201px;
+
+
+
+@mixin mobile {
+  
+  // GOTCHA: NOTE MOBILE IS NOT IN THE SAME FLOW AS EVERYTHING ELSE - WEARABLE IS THE BOTTOM OF THE MULTI DEVICE FLOW
+  @media only screen and (max-width: #{$mobile}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}// mobile
+
+// NOTE: tiny is smaller than mobile
+@mixin tiny {
+
+  // GOTCHA: NOTE MOBILE IS NOT IN THE SAME FLOW AS EVERYTHING ELSE - WEARABLE IS THE BOTTOM OF THE MULTI DEVICE FLOW
+  @media only screen and (max-width: #{$tiny}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}// tiny
+
+/*DOCS: mobile first setup "min" 
+* IMPORTANT - mobile first items have to cascade in a specific order from small to large otherwise
+* ISSUE the smaller queries cancel the larger ones out
+* keep the same order as below
+* GOTCHA: NOTE MOBILE && TINY ARE NOT IN THE SAME FLOW AS EVERYTHING ELSE - WEARABLE IS THE BOTTOM OF THE MULTI DEVICE FLOW
+*/
+
+@mixin wearable {
+  @media only screen and (min-width: #{$wearable}) {
+    @content;
+  }
+}// tiny-range
+
+@mixin micro {
+  @media only screen and (min-width: #{$micro}) {
+    @content;
+  }
+}// iphone 4 range
+
+@mixin mini {
+  @media only screen and (min-width: #{$mini}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}// mini
+
+
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}
+
+// tablet
+
+@mixin laptop {
+  @media only screen and (min-width: #{$laptop}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}
+
+// laptop
+
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}
+
+// desktop
+
+@mixin xxl {
+  @media only screen and (min-width: #{$xxl}) {
+    // GOTCHA: change to XL mixin
+    @content;
+  }
+}
+
+// xxl
+
+/**
+  * NOTE: this is a mobile first setup.
+  */
+
+// @include desktop{
+//   font-size: 40px $mp;
+// }
+
+// @include tablet{
+//   font-size: 32px $mp;
+// }
+
+// @include mobile{
+//   font-size: 30px $mp;
+// }
+
+/**
+    usage:
+
+    @use "../../scss/media";
+    @include media.mobile{
+      padding: 0 .25rem;
+      font-size: 1.5rem;
+    }
+    
+  */
