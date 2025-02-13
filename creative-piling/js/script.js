@@ -1,4 +1,9 @@
-$(window).on("load", function () {
+// $(window).on("load", function () {
+  /**
+   * NOTE: comment out on load above if importing with react
+   * GOTCHA IMPORTANT on("load" does not work with refresh (caching ISSUE)
+   */
+
 
     "use strict";
     
@@ -16,6 +21,7 @@ $(window).on("load", function () {
     Page Piling
 ====================================== */
     if(0 && $(window).width() < 1020) {
+      // this kills the parallax scrolling on smaller devices
         $('.pagedata').removeAttr('id');
         $('html, body').css('overflow-y', 'scroll');
     }
@@ -65,7 +71,7 @@ $(window).on("load", function () {
 
     // $('.navbar-collapse .navbar-nav .nav-link:nth-child(1)').addClass('active');
     $('.navbar-collapse .navbar-nav .nav-link:nth-child(2)').removeClass('active');
-});
+// });
 
 jQuery(function ($) {
 

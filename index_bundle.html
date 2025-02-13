@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/non-public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <!-- <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+ 
+
+
+    <script crossorigin src="https://unpkg.com/@babel/standalone@7.26.8/babel.min.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script> -->
+    <script type="application/javascript" crossorigin src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+    <script type="application/javascript" crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/handlebars@4.7.8/dist/handlebars.js"></script>
+
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="90">
+    <script>
+      Babel.registerPreset("my-preset", {
+      presets: [
+        [Babel.availablePresets["es2017"], { modules: false }],
+        [Babel.availablePresets["react"]]
+
+      ],
+      plugins: [
+        [Babel.availablePlugins["transform-modules-umd"]]
+      ]
+      });
+    </script>
+    <div id="root" class="root"></div>
+    <div class="deferMe"></div>
+
+    <!-- TEMPLATE JS -->
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/bundle.min.js"></script>
+    
+    <!-- Plugin Js -->
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/jquery.appear.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/parallaxie.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/jquery.themepunch.tools.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS -->
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.actions.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.migration.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.video.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/extensions/revolution.extension.beforeafter.min.js"></script>
+    
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/creative-piling/js/jquery.pagepiling.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/creative-piling/js/swiper-thumbnail.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/vendor/js/contact_us.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/creative-piling/js/script.js"></script>
+    
+    <!-- TEMPLATE JS -->
+
+
+    <!-- <script type="text/babel" src="App.js" data-presets="my-preset" ></script> -->
+    <!-- <script type="text/babel" src="index.js" data-presets="my-preset" ></script> -->
+    <!-- <script type="module" src="/src/main.jsx"></script> -->
+    <!-- <script type="text/babel" src="/src/App.js" data-presets="my-preset" defer></script> -->
+    <!-- <script type="text/babel" src="/src/Test.js" data-presets="my-preset" defer></script> -->
+    <!-- <script type="text/babel" src="/src/main.js" data-presets="my-preset" defer></script> -->
+    <link rel="modulepreload" crossorigin href="/dist/assets/vendor-MgCqF9bf.js" data-presets="my-preset" defer>
+    <link rel="modulepreload" crossorigin href="/dist/assets/common-dBmBYUVG.js" data-presets="my-preset" defer>
+    <script type="module" crossorigin src="/dist/assets/index-DR0xxapW.js" data-presets="my-preset" defer></script>
+    <link rel="stylesheet" crossorigin href="/dist/assets/common-CKmmGEw0.css" data-presets="my-preset" >
+    <link rel="stylesheet" crossorigin href="/dist/assets/index-zifsQFkd.css" data-presets="my-preset" >
+  </body>
+</html>

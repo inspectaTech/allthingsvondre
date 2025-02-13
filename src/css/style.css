@@ -1,0 +1,14 @@
+@use "./media";
+.section {
+  height: 100vh !important; }
+
+.root {
+  display: none; }
+
+.html_comp {
+  width: 100%; }
+
+.fullSection {
+  padding-top: 0px !important; }
+  .fullSection .c-wrapper {
+    padding-top: 0px; }

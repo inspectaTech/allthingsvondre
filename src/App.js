@@ -1,76 +1,72 @@
-import React, { useState, useEffect, Suspense } from 'react'
+// import { useState, useEffect, Suspense } from 'react'
+const { useState, useEffect, Suspense }  = React;
 // import ReactDOM from 'react-dom/client'
-import ReactDOM from 'react-dom'
-import Handlebars from 'handlebars'
 // import ReactDOM from 'react-dom'
-import reactLogo from './assets/react.svg'
+// import Handlebars from 'handlebars'
+// import ReactDOM from 'react-dom'
+// import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css';
 import './css/style.scss';
-import { wrapr } from './tools/wrapr';
+// import { wrapr } from './tools/wrapr';
 // import htmlContent from '../gh-index.html?raw';
 import htmlContent from '../vite-index.html?raw';
-import Exporter from './components/Exporter/Exporter.jsx'
-import DeferMe from './components/DeferMe'
+import Exporter from './components/Exporter.js'
+// import DeferMe from './components/DeferMe'
 
 
 
-import '../vendor/css/bundle.min.css';
-// Plugin Css
-import '../vendor/css/revolution-settings.min.css';
-import '../vendor/css/owl.carousel.min.css';
-import '../vendor/css/swiper.min.css';
-import '../vendor/css/LineIcons.min.css';
-// Style Sheet
-import '../creative-piling/css/jquery.pagepiling.css';
-import '../creative-piling/css/pagepiling.css';
-import '../creative-piling/css/style.css';
+// import '../vendor/css/bundle.min.css';
+// // Plugin Css
+// import '../vendor/css/revolution-settings.min.css';
+// import '../vendor/css/owl.carousel.min.css';
+// import '../vendor/css/swiper.min.css';
+// import '../vendor/css/LineIcons.min.css';
+// // Style Sheet
+// import '../creative-piling/css/jquery.pagepiling.css';
+// import '../creative-piling/css/pagepiling.css';
+// import '../creative-piling/css/style.css';
 
-// JavaScript
-import '../vendor/js/bundle.min.js';
+// // JavaScript
+// import '../vendor/js/bundle.min.js';
 
-// Plugin Js
-import '../vendor/js/owl.carousel.min.js';
-import '../vendor/js/swiper.min.js';
-// 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'
-import '../vendor/js/jquery.appear.js';
-import '../vendor/js/TweenMax.min.js';
-import '../vendor/js/parallaxie.min.js';
-// REVOLUTION JS FILES
-import '../vendor/js/jquery.themepunch.tools.min.js';
-import '../vendor/js/jquery.themepunch.revolution.min.js';
-// SLIDER REVOLUTION EXTENSIONS
-import '../vendor/js/extensions/revolution.extension.actions.min.js';
-import '../vendor/js/extensions/revolution.extension.carousel.min.js';
-import '../vendor/js/extensions/revolution.extension.kenburn.min.js';
-import '../vendor/js/extensions/revolution.extension.layeranimation.min.js';
-import '../vendor/js/extensions/revolution.extension.migration.min.js';
-import '../vendor/js/extensions/revolution.extension.navigation.min.js';
-import '../vendor/js/extensions/revolution.extension.parallax.min.js';
-import '../vendor/js/extensions/revolution.extension.slideanims.min.js';
-import '../vendor/js/extensions/revolution.extension.video.min.js';
+// // Plugin Js
+// import '../vendor/js/owl.carousel.min.js';
+// import '../vendor/js/swiper.min.js';
+// // 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'
+// import '../vendor/js/jquery.appear.js';
+// import '../vendor/js/TweenMax.min.js';
+// import '../vendor/js/parallaxie.min.js';
+// // REVOLUTION JS FILES
+// import '../vendor/js/jquery.themepunch.tools.min.js';
+// import '../vendor/js/jquery.themepunch.revolution.min.js';
+// // SLIDER REVOLUTION EXTENSIONS
+// import '../vendor/js/extensions/revolution.extension.actions.min.js';
+// import '../vendor/js/extensions/revolution.extension.carousel.min.js';
+// import '../vendor/js/extensions/revolution.extension.kenburn.min.js';
+// import '../vendor/js/extensions/revolution.extension.layeranimation.min.js';
+// import '../vendor/js/extensions/revolution.extension.migration.min.js';
+// import '../vendor/js/extensions/revolution.extension.navigation.min.js';
+// import '../vendor/js/extensions/revolution.extension.parallax.min.js';
+// import '../vendor/js/extensions/revolution.extension.slideanims.min.js';
+// import '../vendor/js/extensions/revolution.extension.video.min.js';
 // import '../vendor/js/extensions/revolution.extension.beforeafter.min.js';
 
 // import '../creative-piling/js/jquery.pagepiling.min.js';
-import '../creative-piling/js/swiper-thumbnail.js';
-import '../vendor/js/contact_us.js';
+// import '../creative-piling/js/swiper-thumbnail.js';
+// import '../vendor/js/contact_us.js';
 // import '../creative-piling/js/script.js';
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-
-    if(1){
-      let pile_el = document.querySelector(".pagepiling");
-      debugger
-    }
     
     // addHtml();
     return () => {
-      debugger
+      
     }
-  },[])
+  }, [])
 
   const addHtml = () => { 
     // im not adding to Body so i may not need this
@@ -152,8 +148,9 @@ function App() {
       <Exporter {...{home: "body", src: "tag", delay: 0}} >
         {useHtml}
       </Exporter>
+      {/* <div>App</div> */}
       {/* <DeferMe compName="MegaOneClsDefer" delay={0} /> */}
-      <DeferMe compName="MegaOneJsDefer" delay={2} />
+      {/* <DeferMe compName="MegaOneJsDefer" delay={1} /> */}
     </>
   );
 }

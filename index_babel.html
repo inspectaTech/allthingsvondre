@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/non-public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script> -->
+    <script type="application/javascript" crossorigin src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+    <script type="application/javascript" crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/handlebars@4.7.8/dist/handlebars.js"></script>
+
+    <script>
+
+      let cdn_home = `https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main`;
+      let local_home = `.`;
+
+      let local_files = 1;
+      let use_home = local_files ? local_home : cdn_home;
+
+      const link_up = ({ ary, rel, as }) => {
+        ary.forEach((addr) => {
+          let preloadLink = document.createElement("link");
+          preloadLink.href = addr;
+          preloadLink.rel = rel;
+          preloadLink.as = as;
+          document.head.appendChild(preloadLink);
+        });
+      }
+
+      let preload_js_array = [
+        `${use_home}/vendor/js/bundle.min.js`,
+        // Plugin Js
+        `${use_home}/vendor/js/owl.carousel.min.js`,
+        `${use_home}/vendor/js/swiper.min.js`,
+        `${use_home}/vendor/js/jquery.appear.js`,
+        `${use_home}/vendor/js/TweenMax.min.js`,
+        `${use_home}/vendor/js/parallaxie.min.js`,
+        // REVOLUTION JS FILES
+        `${use_home}/vendor/js/jquery.themepunch.tools.min.js`,
+        `${use_home}/vendor/js/jquery.themepunch.revolution.min.js`,
+        // SLIDER REVOLUTION EXTENSIONS
+        `${use_home}/vendor/js/extensions/revolution.extension.actions.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.carousel.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.kenburn.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.layeranimation.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.migration.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.navigation.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.parallax.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.slideanims.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.video.min.js`,
+        `${use_home}/vendor/js/extensions/revolution.extension.beforeafter.min.js`,
+        `${use_home}/creative-piling/js/jquery.pagepiling.min.js`,
+        `${use_home}/creative-piling/js/swiper-thumbnail.js`,
+        `${use_home}/vendor/js/contact_us.js`,
+        `${use_home}/creative-piling/js/script.js`,
+      ];
+
+      link_up({ ary: preload_js_array, rel: "modulepreload", as: "script" });
+
+      "https://cdn.jsdelivr.net/gh/inspectaTech/allthingsvondre@main/creative-piling/images/favicon.ico"
+      // rel="icon",
+
+
+      let preload_css_array = [
+        // Bundle 
+        `${use_home}/vendor/css/bundle.min.css`,
+        // Plugin Css 
+
+        `${use_home}/vendor/css/revolution-settings.min.css`,
+        `${use_home}/vendor/css/owl.carousel.min.css`,
+        `${use_home}/vendor/css/swiper.min.css`,
+        `${use_home}/vendor/css/LineIcons.min.css`,
+        // Style Sheet 
+        `${use_home}/creative-piling/css/jquery.pagepiling.css`,
+        `${use_home}/creative-piling/css/pagepiling.css`,
+        `${use_home}/creative-piling/css/style.css`,
+      ];
+
+      link_up({ ary: preload_css_array, rel: "stylesheet", as: "styles" });
+
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="90">
+    <script>
+      Babel.registerPreset("my-preset", {
+      presets: [
+        [Babel.availablePresets["es2017"], { modules: false }],
+        [Babel.availablePresets["react"]]
+
+      ],
+      plugins: [
+        [Babel.availablePlugins["transform-modules-umd"]]
+      ]
+      });
+    </script>
+    <div id="root" class="root"></div>
+    <div class="deferMe"></div>
+    <!-- <script type="text/babel" src="App.js" data-presets="my-preset" ></script> -->
+    <!-- <script type="text/babel" src="index.js" data-presets="my-preset" ></script> -->
+    <!-- <script type="module" src="/src/main.jsx"></script> -->
+    <!-- <script type="text/babel" src="/src/App.js" data-presets="my-preset" defer></script> -->
+    <script type="text/babel" src="/src/components/Exporter/Exporter.js" data-presets="my-preset" defer></script>
+    <script type="text/babel" src="/src/Test.js" data-presets="my-preset" defer></script>
+    <script type="text/babel" src="/src/main.js" data-presets="my-preset" defer></script>
+  </body>
+</html>

@@ -25,9 +25,9 @@ import React, {useEffect} from 'react'
 // import '../../../vendor/js/extensions/revolution.extension.parallax.min.js';
 // import '../../../vendor/js/extensions/revolution.extension.slideanims.min.js';
 // import '../../../vendor/js/extensions/revolution.extension.video.min.js';
-// import '../../../vendor/js/extensions/revolution.extension.beforeafter.min.js';
+import '../../../vendor/js/extensions/revolution.extension.beforeafter.min.js';
 
-// import '../../../creative-piling/js/jquery.pagepiling.min.js';
+import '../../../creative-piling/js/jquery.pagepiling.min.js';
 // import '../../../creative-piling/js/swiper-thumbnail.js';
 // import '../../../vendor/js/contact_us.js';
 import '../../../creative-piling/js/script.js';

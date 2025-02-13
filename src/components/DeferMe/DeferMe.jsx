@@ -60,7 +60,7 @@ const DeferMe = (props) => {
 
     delay_ref.current = (
       <>
-        <div>running delay</div>
+        {/* <div>running delay</div> */}
         <Suspense fallback={<div className="loader_modal w3-modal active"><div className="loader">Loading...</div></div>} >
           <MyDefer {...{callback}} />
         </Suspense>
@@ -79,7 +79,7 @@ const DeferMe = (props) => {
   const delay_count = useRef(0);
   
   useEffect(() => {
-    if(display_console || 0){
+    if(display_console || 1){
       console.group("Vite");
       console.log(`[DeferMe] accessed`)
       console.groupEnd();

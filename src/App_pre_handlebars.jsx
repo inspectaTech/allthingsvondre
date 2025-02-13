@@ -1,16 +1,15 @@
 import React, { useState, useEffect, Suspense } from 'react'
 // import ReactDOM from 'react-dom/client'
 import ReactDOM from 'react-dom'
-import Handlebars from 'handlebars'
 // import ReactDOM from 'react-dom'
 import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import viteLogo from '/vite.svg'
 import './App.css';
 import './css/style.scss';
 import { wrapr } from './tools/wrapr';
 // import htmlContent from '../gh-index.html?raw';
 import htmlContent from '../vite-index.html?raw';
-import Exporter from './components/Exporter/Exporter.jsx'
+import Exporter from './components/Exporter'
 import DeferMe from './components/DeferMe'
 
 
@@ -49,28 +48,23 @@ import '../vendor/js/extensions/revolution.extension.navigation.min.js';
 import '../vendor/js/extensions/revolution.extension.parallax.min.js';
 import '../vendor/js/extensions/revolution.extension.slideanims.min.js';
 import '../vendor/js/extensions/revolution.extension.video.min.js';
-// import '../vendor/js/extensions/revolution.extension.beforeafter.min.js';
+import '../vendor/js/extensions/revolution.extension.beforeafter.min.js';
 
-// import '../creative-piling/js/jquery.pagepiling.min.js';
+import '../creative-piling/js/jquery.pagepiling.min.js';
 import '../creative-piling/js/swiper-thumbnail.js';
 import '../vendor/js/contact_us.js';
-// import '../creative-piling/js/script.js';
+import '../creative-piling/js/script.js';
 
 function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-
-    if(1){
-      let pile_el = document.querySelector(".pagepiling");
-      debugger
-    }
     
     // addHtml();
     return () => {
-      debugger
+      
     }
-  },[])
+  }, [])
 
   const addHtml = () => { 
     // im not adding to Body so i may not need this
@@ -96,25 +90,11 @@ function App() {
     //   useExport,
     //   document.getElementsByTagName('body'),
     // );
-  }// addHtml
+  }
 
   // digital business
-  // const h_cont = htmlContent//(data);
 
-  /**
-   * npm run dev // WORKS
-   * npm run preview //FAILS
-   * index.html is using this handlebars data injection
-   * {{title}}
-   */
-  const data = {
-    title: 'digital business',
-    items: ['Item 1', 'Item 2', 'Item 3']
-  };// WORKS
-
-  const compiledTemplate = Handlebars.compile(htmlContent);
-  const h_cont = compiledTemplate(data);
-
+  const h_cont = htmlContent//(data);
   const useHtml = (
     <>
       <div dangerouslySetInnerHTML={{ __html: h_cont }} className={`html_comp plax-bg`}  />
@@ -153,9 +133,9 @@ function App() {
         {useHtml}
       </Exporter>
       {/* <DeferMe compName="MegaOneClsDefer" delay={0} /> */}
-      <DeferMe compName="MegaOneJsDefer" delay={2} />
+      {/* <DeferMe compName="MegaOneJsDefer" delay={1} /> */}
     </>
   );
 }
 
-export default App   
+export default App

@@ -14,6 +14,16 @@ $mp: !important;
   width: 100%;
 }
 
+.fullSection{
+  padding-top: 0px $mp;
+  .c-wrapper{
+    padding-top: 0px;
+  }
+}
+
+.inner {
+  max-width: unset !important;
+}
 
 
 // @use "./media";// sample import (top of file?)
